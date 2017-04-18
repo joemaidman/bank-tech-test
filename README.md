@@ -36,12 +36,17 @@ I want the statement to show a cumulative account balance
 As a banker
 So that I don't give customers money they don't have and go bust
 I want to refuse withdrawals that exceed the customer's account balance
+
+As a banker
+So that the system doesn't break
+I want to refuse withdrawals or deposits that are for a negative amount
 ```
 
 ## Technologies
 - javascript
-- [jasmine-node](https://github.com/mhevery/jasmine-node)
 - [node.js](https://nodejs.org/en/)
+- [jasmine-node](https://github.com/mhevery/jasmine-node)
+- [timekeeper](https://github.com/vesln/timekeeper)
 
 ## Principles and patterns
 - [Module pattern](https://en.wikipedia.org/wiki/Module_pattern)
@@ -62,6 +67,7 @@ I want to refuse withdrawals that exceed the customer's account balance
 
 ## Usage
 - Run `node`
+- Run `.load ./app.js`
 - An example user session is as follows:
 
 ## Future improvements
