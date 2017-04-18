@@ -7,5 +7,8 @@
     "test": "jasmine-node spec"
   },
   "author": "Joe Maidman",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "timekeeper": "^1.0.0"
+  }
 }

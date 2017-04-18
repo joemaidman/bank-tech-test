@@ -20,7 +20,15 @@ I want to view a statement of all the transactions on my account
 
 As a customer
 So that I can analyse the activity on my account
-I want the statement to show the date and amount of the transactions and my resulting account balance
+I want the statement to show the date of transactions
+
+As a customer
+So that I can analyse the activity on my account
+I want the statement to show whether the transaction was a credit or debit
+
+As a customer
+So that I can analyse the activity on my account
+I want the statement to show a cumulative account balance
 ```
 
 **Edge cases**

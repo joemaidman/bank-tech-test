@@ -10,4 +10,8 @@ describe("Account", function(){
   it("has a default account balance of zero", function(){
     expect(account.balance).toEqual(0);
   });
+
+  it("has a array of transactions that is empty", function(){
+    expect(account.transactions).toEqual([]);
+  });
 });
