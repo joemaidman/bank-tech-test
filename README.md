@@ -17,6 +17,10 @@ I want to withdraw money from my account
 As a customer
 So that I can see activity on my account
 I want to view a list of all the transactions on my account
+
+As a customer
+So that I can analyse the activity on my account
+I want the list to show the date and amount of the transactions and my resulting account balance
 ```
 
 **Edge cases**
