@@ -1,30 +1,30 @@
 'use strict';
 var Transaction = require('../src/models/transaction.js');
 var timekeeper = require('timekeeper');
-var defaultTransacion;
-var customTransacion;
-var mockTransacionDate;
+var defaultTransaction;
+var customTransaction;
+var mockTransactionDate;
 
 describe("Transaction", function(){
 
   describe("with a default amount", function(){
 
     beforeEach(function(){
-      mockTransacionDate = new Date();
-      timekeeper.freeze(mockTransacionDate);
-      defaultTransacion = new Transaction();
+      mockTransactionDate = new Date();
+      timekeeper.freeze(mockTransactionDate);
+      defaultTransaction = new Transaction();
     });
 
    it("is defined", function(){
-     expect(defaultTransacion).toBeDefined();
+     expect(defaultTransaction).toBeDefined();
    });
 
    it("has a default amount of zero", function(){
-     expect(defaultTransacion.amount).toEqual(0);
+     expect(defaultTransaction.amount).toEqual(0);
    });
 
    it("has a date equal to the date of the transaction", function(){
-     expect(defaultTransacion.date).toEqual(mockTransacionDate);
+     expect(defaultTransaction.date).toEqual(mockTransactionDate);
    });
 
    afterEach(function(){
@@ -35,12 +35,18 @@ describe("Transaction", function(){
 
  describe("with a custom amount", function(){
 
-   beforeEach(function(){
-     customTransacion = new Transaction(10);
+   it("can accept a custom amount for a credit transaction", function(){
+     customTransaction = new Transaction(10);
+     expect(customTransaction.amount).toEqual(10);
+     expect(customTransaction.isCredit()).toBe(true);
+     expect(customTransaction.isDebit()).toBe(false);
    });
 
-   it("can accept a custom amount for the transaction", function(){
-     expect(customTransacion.amount).toEqual(10);
+   it("can accept a custom amount for a debit transaction", function(){
+     customTransaction = new Transaction(-10);
+     expect(customTransaction.amount).toEqual(-10);
+     expect(customTransaction.isCredit()).toBe(false);
+     expect(customTransaction.isDebit()).toBe(true);
    });
 
  })
