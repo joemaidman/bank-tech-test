@@ -1,0 +1,50 @@
+'use strict';
+var Statement = require('../src/models/statement.js');
+var Helpers = require('./helpers.js');
+var helpers = new Helpers();
+var statement;
+var account;
+var depositDouble;
+var withdrawalDouble;
+
+var accountDouble = function(){
+  this.transactions = [];
+};
+
+var transactionDouble = function(amount = 0){
+  this.amount = amount;
+  this.date = new Date();
+
+  transactionDouble.prototype = {
+    isCredit: function(){
+      return this.amount >= 0 ? true : false;
+    } ,
+    isDebit: function(){
+      return this.amount < 0 ? true : false;
+    }
+  };
+};
+
+describe("Statement", function(){
+
+  beforeEach(function(){
+   statement = new Statement();
+   account = new accountDouble();
+  });
+
+  it("is defined", function(){
+   expect(statement).toBeDefined();
+  });
+
+  xit("can pretty print/return a list of account transactions with date, credit, debit and balance", function(){
+    depositDouble = new transactionDouble(100);
+    withdrawalDouble = new transactionDouble(-50);
+    account.transactions.push(depositDouble);
+    account.transactions.push(withdrawalDouble);
+    var statementString = `date || credit || debit || balance\n
+                           ${helpers.prettyDate(withdrawalDouble.date)} || || 50 || 50\n
+                           ${helpers.prettyDate(depositDouble.date)} || 100 || || 100`
+   expect(statement.print(account.transactions)).toEqual(statementString);
+  });
+
+});
