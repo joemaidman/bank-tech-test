@@ -8,7 +8,7 @@ var mockTransactionDate;
 describe("Transaction", function(){
 
   describe("with a default amount", function(){
-    
+
     beforeEach(function(){
       mockTransactionDate = new Date();
       timekeeper.freeze(mockTransactionDate);
@@ -42,7 +42,7 @@ describe("Transaction", function(){
     it("can accept a custom amount and balance for a credit transaction", function(){
       customTransaction = new Transaction(10, 10);
       expect(customTransaction.amount).toEqual(10);
-      expect(customTransaction.balance).toEqual(10);
+      expect(customTransaction.balance).toEqual(20);
       expect(customTransaction.isCredit()).toBe(true);
       expect(customTransaction.isDebit()).toBe(false);
     });
@@ -50,7 +50,7 @@ describe("Transaction", function(){
     it("can accept a custom amount for a debit transaction", function(){
       customTransaction = new Transaction(-10, 0);
       expect(customTransaction.amount).toEqual(-10);
-      expect(customTransaction.balance).toEqual(0);
+      expect(customTransaction.balance).toEqual(-10);
       expect(customTransaction.isCredit()).toBe(false);
       expect(customTransaction.isDebit()).toBe(true);
     });

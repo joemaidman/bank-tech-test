@@ -7,13 +7,13 @@ function Account(){
 Account.prototype = {
   deposit: function(amount){
     if (amount < 0) throw "You cannot deposit a negative amount";
-    transaction = new Transaction(amount, (this.balance() + amount));
+    transaction = new Transaction(amount, this.balance());
     this._addTransaction(transaction);
   },
   withdraw: function(amount){
     if (amount < 0) throw "You cannot withdraw a negative amount";
     if (amount > this.balance()) throw "You cannot withdraw more money than you have";
-    transaction = new Transaction(-amount, (this.balance() - amount));
+    transaction = new Transaction(-amount, this.balance());
     this._addTransaction(transaction);
   },
   balance: function(){

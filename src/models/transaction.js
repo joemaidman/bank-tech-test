@@ -1,7 +1,7 @@
 function Transaction(amount = 0, balance = 0){
   this.amount = amount;
   this.date = new Date();
-  this.balance = balance;
+  this.balance = balance + (amount);
 }
 
 Transaction.prototype = {

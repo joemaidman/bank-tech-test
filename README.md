@@ -2,6 +2,7 @@
 This project emulates the infrastructure behind a basic deposit banking system. Users are able to `Withdraw` and `Deposit` amounts from their `Account` as well as view a list of transactions. The application interface is served via the node REPL using the command line interface.
 
 ## Approach
+I initially started with separate `Withdrawal` and `Deposit` classes which were later refactored to a single `Transaction` class.
 
 ## User Stories
 **MVP**
@@ -96,4 +97,5 @@ date || credit || debit || balance
 ```
 
 ## Future improvements
--
+- Consider injecting the `Transaction` and `Statement` models into the `Account` model to reduce cross dependencies and refactor the test suite accordingly.
+- Refactor the statement print method to return a string containing a uniform grid.
