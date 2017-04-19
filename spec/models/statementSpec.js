@@ -1,6 +1,6 @@
 'use strict';
-var Statement = require('../src/models/statement.js');
-var Helpers = require('./helpers.js');
+var Statement = require('../../src/models/statement.js');
+var Helpers = require('../helpers/helpers.js');
 var helpers = new Helpers();
 var statement;
 var account;

@@ -1,5 +1,5 @@
 'use strict';
-var Transaction = require('../src/models/transaction.js');
+var Transaction = require('../../src/models/transaction.js');
 var timekeeper = require('timekeeper');
 var defaultTransaction;
 var customTransaction;

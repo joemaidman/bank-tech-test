@@ -2,7 +2,7 @@
   "name": "bank",
   "version": "1.0.0",
   "description": "Allows users to withdraw and deposit amounts from their bank account as well as view a list of transactions.",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "jasmine-node spec"
   },

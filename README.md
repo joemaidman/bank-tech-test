@@ -1,8 +1,24 @@
 # Bank Tech Test
 This project emulates the infrastructure behind a basic deposit banking system. Users are able to `Withdraw` and `Deposit` amounts from their `Account` as well as view a list of transactions. The application interface is served via the node REPL using the command line interface.
 
+```
+         _._._                       _._._
+        _|   |_                     _|   |_
+        | ... |_._._._._._._._._._._| ... |
+        | ||| |  o JOE'S    BANK o  | ||| |
+        | """ |  """    """    """  | """ |
+   ())  |[-|-]| [-|-]  [-|-]  [-|-] |[-|-]|  ())
+  (())) |     |---------------------|     | (()))
+ (())())| """ |  """    """    """  | """ |(())())
+ (()))()|[-|-]|  :::   .-"-.   :::  |[-|-]|(()))()
+ ()))(()|     | |~|~|  |_|_|  |~|~| |     |()))(()
+    ||  |_____|_|_|_|__|_|_|__|_|_|_|_____|  ||
+~ ~^^ @@@@@@@@@@@@@@/=======\@@@@@@@@@@@@@@ ^^~ ~
+    ^~^~                                ~^~^
+```
+
 ## Approach
-I chose to use javascript and Node.js for thi project. I initially started with separate `Withdrawal` and `Deposit` classes which were later refactored to a single `Transaction` class.
+I chose to use javascript and Node.js for this project. I initially started with separate `Withdrawal` and `Deposit` classes which were later refactored to a single `Transaction` class.
 
 ## Challenges
 -
@@ -61,7 +77,7 @@ I want to refuse withdrawals or deposits that are for a negative amount
 ## Installaton
 - Clone the repo.
 - `cd` to the project folder.
-- Run `nom install` to install project dependencies.
+- Run `npm install` to install project dependencies.
 
 ## Testing
 - Run `npm test` which is defined as `jasmine-node spec` via the `package.json` file.
