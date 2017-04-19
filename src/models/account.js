@@ -1,4 +1,5 @@
 var Transaction = require('./transaction.js');
+var Statement = require('./statement.js');
 
 function Account(){
   this.transactions = [];
@@ -18,7 +19,7 @@ Account.prototype = {
     return this.transactions.reduce(function (a,b) { return a + b.amount; }, 0)
   },
   printStatment: function(){
-    console.log(new Statement.print(this.transactions));
+    console.log(new Statement().print(this.transactions));
   },
   _addTransaction: function(amount){
     this.transactions.push(new Transaction(amount, this.balance()));

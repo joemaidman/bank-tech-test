@@ -12,12 +12,16 @@ describe("Account", function(){
     expect(account).toBeDefined();
   });
 
-  it("has a default #balance of zero", function(){
-    expect(account.balance()).toEqual(0);
-  });
-
   it("has a array of #transactions that is empty", function(){
     expect(account.transactions).toEqual([]);
+  });
+
+  describe(".balance", function(){
+
+    it("can return the current balance", function(){
+      expect(account.balance()).toEqual(0);
+    });
+
   });
 
   describe(".deposit", function(){
@@ -60,6 +64,17 @@ describe("Account", function(){
 
     it("throws an error if the amount is more than the account balance", function(){
       expect(function(){account.withdraw(200)}).toThrow("You cannot withdraw more money than you have");
+    });
+
+  });
+
+  describe(".printStatment", function(){
+
+    it("calls console.log with a pretty string", function(){
+      var consoleSpy = spyOn(console, "log").andReturn(true);
+      var prettyString = "date || credit || debit || balance\n"
+      account.printStatment();
+      expect(consoleSpy).toHaveBeenCalledWith(prettyString);
     });
 
   });
