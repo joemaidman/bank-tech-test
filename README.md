@@ -70,5 +70,30 @@ I want to refuse withdrawals or deposits that are for a negative amount
 - Run `.load ./app.js`
 - An example user session is as follows:
 
+```
+$ node
+> .load ./app.js
+> var Account= require('./src/models/account.js');
+undefined
+> var Transaction = require('./src/models/transaction.js');
+undefined
+> var Statement = require('./src/models/statement.js');
+undefined
+> myAccount = new Account();
+{ transactions: [] }
+> myAccount.deposit(100);
+undefined
+> myAccount.balance();
+100
+> myAccount.withdraw(10);
+undefined
+> myAccount.balance();
+90
+> myAccount.printStatment();
+date || credit || debit || balance
+19/4/2017 ||  || 10.00 || 90.00
+19/4/2017 || 100.00 ||  || 100.00
+```
+
 ## Future improvements
 -
