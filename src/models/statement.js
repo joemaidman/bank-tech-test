@@ -24,7 +24,7 @@ Statement.prototype = {
   },
 
   _printCredit: function(amount){
-    return  amount >= 0 ? amount.toFixed(2) : "";
+    return amount >= 0 ? amount.toFixed(2) : "";
   },
 
   _printDebit: function(amount){
@@ -33,7 +33,7 @@ Statement.prototype = {
 
   _printBalance: function(amount){
     return amount.toFixed(2);
-  }
+  },
 };
 
 module.exports = Statement;
