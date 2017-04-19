@@ -50,7 +50,6 @@ I want to refuse withdrawals or deposits that are for a negative amount
 
 ## Principles and patterns
 - [Module pattern](https://en.wikipedia.org/wiki/Module_pattern)
-- Inheritance
 - DRY
 - SOLID
 - Object Orientated Design
