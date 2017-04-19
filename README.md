@@ -2,7 +2,10 @@
 This project emulates the infrastructure behind a basic deposit banking system. Users are able to `Withdraw` and `Deposit` amounts from their `Account` as well as view a list of transactions. The application interface is served via the node REPL using the command line interface.
 
 ## Approach
-I initially started with separate `Withdrawal` and `Deposit` classes which were later refactored to a single `Transaction` class.
+I chose to use javascript and Node.js for thi project. I initially started with separate `Withdrawal` and `Deposit` classes which were later refactored to a single `Transaction` class.
+
+## Challenges
+-
 
 ## User Stories
 **MVP**
@@ -55,9 +58,6 @@ I want to refuse withdrawals or deposits that are for a negative amount
 - SOLID
 - Object Orientated Design
 
-## Challenges
--
-
 ## Installaton
 - Clone the repo.
 - `cd` to the project folder.
@@ -68,18 +68,10 @@ I want to refuse withdrawals or deposits that are for a negative amount
 
 ## Usage
 - Run `node`
-- Run `.load ./app.js`
+- Run `.load ./app.js`, a file which
 - An example user session is as follows:
 
 ```
-$ node
-> .load ./app.js
-> var Account= require('./src/models/account.js');
-undefined
-> var Transaction = require('./src/models/transaction.js');
-undefined
-> var Statement = require('./src/models/statement.js');
-undefined
 > myAccount = new Account();
 { transactions: [] }
 > myAccount.deposit(100);
