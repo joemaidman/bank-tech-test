@@ -15,15 +15,6 @@ var transactionDouble = function(amount = 0, balance = 0){
   this.amount = amount;
   this.balance = balance;
   this.date = new Date();
-
-  transactionDouble.prototype = {
-    isCredit: function(){
-      return this.amount >= 0 ? true : false;
-    } ,
-    isDebit: function(){
-      return this.amount < 0 ? true : false;
-    }
-  };
 };
 
 describe("Statement", function(){

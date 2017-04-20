@@ -4,13 +4,13 @@
   "description": "Allows users to withdraw and deposit amounts from their bank account as well as view a list of transactions.",
   "main": "app.js",
   "scripts": {
-    "test": "jasmine-node spec"
+    "test": "istanbul cover --report lcov --report json --report text --report html jasmine-node spec/models/*.js"
   },
   "author": "Joe Maidman",
   "license": "ISC",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
+    "istanbul": "^0.4.5",
     "jasmine-node": "^1.14.5",
     "timekeeper": "^1.0.0"
   }
