@@ -9,6 +9,9 @@
   "author": "Joe Maidman",
   "license": "ISC",
   "dependencies": {
+  },
+  "devDependencies": {
+    "jasmine-node": "^1.14.5",
     "timekeeper": "^1.0.0"
   }
 }
