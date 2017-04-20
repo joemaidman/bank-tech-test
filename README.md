@@ -2,19 +2,19 @@
 This project emulates the infrastructure behind a basic deposit banking system. Users are able to `Withdraw` and `Deposit` amounts from their `Account` as well as view a list of transactions. The application interface is served via the node REPL using the command line interface.
 
 ```
-                    _._._                       _._._
-                   _|   |_                     _|   |_
-                   | ... |_._._._._._._._._._._| ... |
-                   | ||| |  o JOE'S    BANK o  | ||| |
-                   | """ |  """    """    """  | """ |
-              ())  |[-|-]| [-|-]  [-|-]  [-|-] |[-|-]|  ())
-              (()))|     |---------------------|     | (()))
-            (())())| """ |  """    """    """  | """ |(())())
-            (()))()|[-|-]|  :::   .-"-.   :::  |[-|-]|(()))()
-            ()))(()|     | |~|~|  |_|_|  |~|~| |     |()))(()
-               ||  |_____|_|_|_|__|_|_|__|_|_|_|_____|  ||
-            ~ ~^^ @@@@@@@@@@@@@@/=======\@@@@@@@@@@@@@@ ^^~ ~
-                 ^~^~                                ~^~^
+                           _._._                       _._._
+                          _|   |_                     _|   |_
+                          | ... |_._._._._._._._._._._| ... |
+                          | ||| |  o JOE'S    BANK o  | ||| |
+                          | """ |  """    """    """  | """ |
+                     ())  |[-|-]| [-|-]  [-|-]  [-|-] |[-|-]|  ())
+                    (())) |     |---------------------|     | (()))
+                   (())())| """ |  """    """    """  | """ |(())())
+                   (()))()|[-|-]|  :::   .-"-.   :::  |[-|-]|(()))()
+                   ()))(()|     | |~|~|  |_|_|  |~|~| |     |()))(()
+                      ||  |_____|_|_|_|__|_|_|__|_|_|_|_____|  ||
+                   ~ ~^^ @@@@@@@@@@@@@@/=======\@@@@@@@@@@@@@@ ^^~ ~
+                        ^~^~                                ~^~^
 ```
 
 ## Specification
@@ -44,7 +44,7 @@ Domain modelling led to the creation of an `Account` class as well as separate `
 
 ### Domain model
 
-[Domain Model](https://github.com/joemaidman/bank-tech-test/blob/master/screenshots/bankDomainModel.png)
+![Domain Model](https://github.com/joemaidman/bank-tech-test/blob/master/screenshots/bankDomainModel.png)
 
 ## Challenges
 - Initial domain modelling proved too high-level.
