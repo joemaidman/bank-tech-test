@@ -1,4 +1,4 @@
-# Bank Tech Test [![Build Status](https://travis-ci.org/joemaidman/bank-tech-test.svg?branch=master)](https://travis-ci.org/joemaidman/bank-tech-test)  [![Code Climate](https://codeclimate.com/github/joemaidman/bank-tech-test/badges/gpa.svg)](https://codeclimate.com/github/joemaidman/bank-tech-test)
+# Bank Tech Test [![Build Status](https://travis-ci.org/joemaidman/bank-tech-test.svg?branch=master)](https://travis-ci.org/joemaidman/bank-tech-test) [![Code Climate GPA](https://codeclimate.com/github/joemaidman/bank-tech-test/badges/gpa.svg)](https://codeclimate.com/github/joemaidman/bank-tech-test) [![Code Climate Coverage](https://codeclimate.com/github/joemaidman/bank-tech-test/badges/coverage.svg)](https://codeclimate.com/github/joemaidman/bank-tech-test)
 This project emulates the infrastructure behind a basic deposit banking system. Users are able to `Withdraw` and `Deposit` amounts from their `Account` as well as view a list of transactions. The application interface is served via the node REPL using the command line interface.
 
 ```
