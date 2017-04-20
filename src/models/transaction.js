@@ -10,7 +10,7 @@ Transaction.prototype = {
   } ,
   isDebit: function(){
     return this.amount < 0 ? true : false;
-  },
+  }
 };
 
 module.exports = Transaction;

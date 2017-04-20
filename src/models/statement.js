@@ -33,7 +33,7 @@ Statement.prototype = {
 
   _printBalance: function(amount){
     return amount.toFixed(2);
-  },
+  }
 };
 
 module.exports = Statement;
