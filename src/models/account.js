@@ -19,7 +19,9 @@ Account.prototype = {
     return this.transactions.reduce(function (a,b) { return a + b.amount; }, 0)
   },
   printStatment: function(){
-    console.log(new Statement().print(this.transactions));
+    var statement = new Statement().print(this.transactions);
+    console.log(statement);
+    return statement;
   },
   _addTransaction: function(amount){
     this.transactions.push(new Transaction(amount, this.balance()));

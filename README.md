@@ -116,7 +116,7 @@ I want to refuse withdrawals or deposits that are for a negative amount
 ## Usage
 - Run `node`
 - Run `.load ./app.js`, a file which
-- An example user session is as follows:
+- An example user session is shown below. A featureSpec file is also included in the project, showing a typical customer session.
 
 ```
 > myAccount = new Account();
