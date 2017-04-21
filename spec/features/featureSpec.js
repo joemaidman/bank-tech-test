@@ -13,7 +13,7 @@ describe("A customer session", function(){
     timekeeper.travel(mockDate);
 
     it("should print out the statement showing a deposit of 100 on 31 Dec 2029", function(){
-        account.deposit(100);
+      account.deposit(100);
       var statementOne = `date || credit || debit || balance\n31/12/2029 || 100.00 ||  || 100.00\n`;
       expect(account.printStatment()).toEqual(statementOne);
     });
